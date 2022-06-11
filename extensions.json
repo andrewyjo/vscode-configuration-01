@@ -1,8 +1,0 @@
-{
-  "recommendations": [
-    "ms-python.python",
-    "batisteo.vscode-django",
-    "christian-kohler.path-intellisense",
-    "esbenp.prettier-vscode"
-  ]
-}
