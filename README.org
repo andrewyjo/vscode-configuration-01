@@ -1,0 +1,47 @@
+#+TITLE:.vscode configuration files
+#+AUTHOR:AC
+#+DESCRIPTION:vscode workspace configuration files
+#+DATE:<2022-06-10 Fri>
+#+STARTUP: inlineimages
+
+
+* Some basic information about vscode.
+VScode has 3 groups in which settings are managed.
+Each of these groups have the same settings but effect different scopes in which
+these settings are applied.
+
+#+CAPTION:If you enter your settings(Ctrl + ,), you will see these three options; User, Workspace, and a folder pointing to the one you have opened.
+[[./settings.png]]
+
+All affected in the User settings will effect ALL projects and files you edit in VScode.
+
+All settings affected in the Workspace settings will effect ALL files in your workspace(s)
+
+All settings affected in the 3rd option(Name of your current workspace) will effect ALL files in that specific workspace.
+Changing settings in the 3rd option will create a '.vscode' folder inside that specific workspace folder.
+These settings in this .vscode folder will tell VSCode not to use the global settings nor the workspace settings, and instead
+use the settings inside this folder.
+
+* To use this repo for the current project we are working on...
+Copy this .vscode inside the project folder we are working on.
+
+After moving this folder into your current workspace, after editing or changing files, a little box
+on the bottom right of VScode will ask you to install plugins that are recommended. These plugins are
+essential for the .vscode configuration to run properly.
+
+In this .vscode folder these are the plugins that are recommended in the extensions.json.
+
+|------------------------------------+----------------------------------------------------------------------------------------------------------------|
+| ms-python.python                   | Used for python development, includes intellisense, linting, etc                                               |
+| batisteo.vscode-django             | Used for django development                                                                                    |
+| Christian-kohlet.path-intellisense | Used to for path intellisense(suggesting correct file paths)                                                   |
+| esbenp.prettier-vscode             | Used by our project to have uniform formatting; This will be used by the settings.json file to autoformat code |
+|------------------------------------+----------------------------------------------------------------------------------------------------------------|
+
+Out of these, the prettier plugin is most important because it is used by the settings.json file to
+auto-format html,django-html,css,json, and markdown files upon saving.
+
+In the settings.json file, VSCode will automatically use a default program called autopep8 to format
+our python files to PEP8 format(https://peps.python.org/pep-0008/). If not installed it will prompt
+you to install it.
+
